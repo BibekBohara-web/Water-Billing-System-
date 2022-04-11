@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    {% load static %}
+
+    <title>Billing and History</title>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/home">HOME</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </nav>
+
+    <div class="main">
+      <h1
+        class="display-1"
+        style="
+          background-color: dimgrey;
+          margin-top: 20px;
+          padding: 20px;
+          text-align: center;
+        "
+      >
+        Water Billing System
+      </h1>
+    </div>
+
+    <h1 class="display-3">Table of Billing and History</h1>
+    <hr />
+
+    <table class="table">
+      <tr>
+        
+        <th>Information</th>
+        <th>Date and Time</th>
+        <th>By Client/Supplier</th>
+        <th>Action</th>
+      </tr>
+      <tbody>
+        <tr>
+          <td>New user is added.</td>
+          <td>21st May 2021:16:20</td>
+          <td>Client</td>
+          <td><a href="#">Delete</a> <a href="">Hide</a></td> 
+        </tr>
+        <tr>
+            <td>New Supplier want to get added.</td>
+            <td>1st May 2021:01:01</td>
+            <td>Supplier</td>
+            <td><a href="#">Delete</a> <a href="">Hide</a></td> 
+          </tr>
+          <tr>
+            <td>Ram Bahadur pay to Ramro Khane Pane of 25 unit of Rs 250</td>
+            <td>2st May 2021:02:45</td>
+            <td>Client</td>
+            <td><a href="#">Delete</a> <a href="">Hide</a></td> 
+          </tr>
+          <tr>
+            <td>New user is added of Krishna Bhattrai.</td>
+            <td>2st May 2021:02:46</td>
+            <td>Client</td>
+            <td><a href="#">Delete</a> <a href="">Hide</a></td> 
+          </tr>
+          <tr>
+            <td>Bibek Bohara Left from this Water Billing System</td>
+            <td>3rd May 2021:16:20</td>
+            <td>Client</td>
+            <td><a href="#">Delete</a> <a href="">Hide</a></td> 
+          </tr>
+          <tr>
+            <td>Dipen Bantawa join Water Billing System as user name rangoon </td>
+            <td>21st May 2021:16:20</td>
+            <td>Client</td>
+            <td><a href="#">Delete</a> <a href="">Hide</a></td> 
+          </tr>
+          <tr>
+            <td>Niraj have question in question - " Hi! sir I find your web so informative and attraactive. I'm so thankfull to your web. "</td>
+            <td>15th June 2022:23:22</td>
+            <td>Supplier</td>
+            <td><a href="#">Delete</a> <a href="">Hide</a></td> 
+          </tr>
+          <tr>
+            <td>Monaj Gurung -" I want to reset my user password. "</td>
+            <td>7th July 2022:22:22</td>
+            <td>Supplier</td>
+            <td><a href="#">Delete</a> <a href="">Hide</a></td> 
+          </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

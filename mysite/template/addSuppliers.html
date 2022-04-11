@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- {% load static%} -->
+    <!-- <link rel="stylesheet" type="text/css" href="signup/style.css}"> -->
+
+    <title>Sign Up</title>
+</head>
+<body>
+
+  {% if data %}
+
+  <form action="{% url 'cupdate_item' data.id %}" method="POST" style="border:1px solid #ccc" >
+    {% csrf_token %}
+   
+    <div class="container">
+      <h1  style="text-align: center">Adding Suppliers</h1>
+      <p  style="text-align: center">Please fill in this form to add an Supplier.</p>
+      <hr>
+
+      <label for="cname"><b>Company Name</b></label><br>
+      <input type="text" value="{{data.cname}}" placeholder="Enter Company Name" name="cname" size="50" required>
+      <br><br>
+  
+      <label for="cemail"><b>Email Address</b></label><br>
+      <input type="text" placeholder="Enter Email" value="{{data.cemail}}" name="cemail" size="50" required>
+      <br><br>
+
+      <label for="cphone-number"><b>Contact Number</b></label><br>
+      <input type="text" placeholder="Add your phone number" value="{{data.cphone_number}}" name="cphone_number" size="50" required>
+      <br><br>
+
+      <label for="address"><b>Address</b></label><br>
+      <input type="text" placeholder="Add your Location" name="clocation" value="{{data.clocation}}" size="50" required>
+      <br><br>
+  
+      <div class="clearfix">
+        <button type="save" class="savelbtn" value="cAdd">Update</button>
+        <button type="cancel" class="cancelbtn"><a href="/suppliers">Cancel</a> </button>
+        
+      </div>
+    </div>
+  </form> 
+
+  {% else %}
+    
+    <form action="{% url 'cadd' %}" method="POST" style="border:1px solid #ccc" >
+        {% csrf_token %}
+       
+        <div class="container">
+          <h1  style="text-align: center">Adding Supplier</h1>
+          <p  style="text-align: center">Please fill in this form to add an user.</p>
+          <hr>
+
+          <label for="cname"><b>Company Name</b></label><br>
+          <input type="text" placeholder="Enter Company Name" name="cname" size="50" required>
+          <br><br>
+      
+          <label for="cemail"><b>Email Address</b></label><br>
+          <input type="text" placeholder="Enter Email address" name="cemail" size="50" required>
+          <br><br>
+
+          <label for="cphone-number"><b>Contact Number</b></label><br>
+          <input type="text" placeholder="Add your phone number" name="cphone_number" size="50" required>
+          <br><br>
+
+          <label for="caddress"><b>Address</b></label><br>
+          <input type="text" placeholder="Add your Location" name="clocation" size="50" required>
+          <br><br>
+      
+          <div class="clearfix">
+            <button type="save" class="savelbtn" value="cAdd">Save</button>
+            <button type="cancel" class="cancelbtn"><a href="/suppliers">Cancel</a></button>
+            
+          </div>
+        </div>
+      </form> 
+    {% endif %}
+</body>
+</html>
