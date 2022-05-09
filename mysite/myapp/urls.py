@@ -3,12 +3,19 @@ from django.contrib import admin
 from django.urls import path, include
 from . import views
 
+
+
 urlpatterns = [
-    path('', views.index, name="index"),
+   # home page
+    path('', views.home1, name="home1"),
+    path('index', views.index, name="index"),
 
     path('signup', views.signup, name="signup"),
 
     path('indexD', views.indexD, name="indexD"),
+
+    # Log Out
+    
 
     # profile
 
@@ -62,9 +69,13 @@ urlpatterns = [
 
     path('bh',views.bh, name="bh" ),
 
-  # Log Out
-  path('logout', views.logout, name="logout"),
-
     # path('signin', views.signin, name="signin"),
     # path('signout', views.signout, name="signout"),
+
+
+  #pdf print
+  path('pdf', views.pdf, name='pdf'),
+
+  #pdf print for suppliers
+  path('supplier_pdf', views.supplier_pdf, name='supplier_pdf'),
 ]

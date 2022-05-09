@@ -19,8 +19,8 @@
   <body>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="/home">HOME</a>
+      <div class="container-fluid" style="background-color: black; height: 50px;">
+        <a class="navbar-brand" href="/home" style="color: white;">HOME</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -32,50 +32,55 @@
       <h1
         class="display-1"
         style="
-          background-color: dimgrey;
-          margin-top: 20px;
+          background-color: rgb(86, 170, 226);
+          margin-top: 5px;
           padding: 20px;
           text-align: center;
         "
       >
-        Water Billing System
+        WATER BILLING SYSTEM <br>
       </h1>
     </div>
-    <div
-      class="but"
-      style="text-align: right; padding-right: 10px; margin-top: 20px"
-    >
-      <button><a href="/addClient" style="color: black">Add Client</a></button>
-    </div>
+    <div style="background-color: rgb(237, 237, 237); margin-left: 100px; margin-right: 100px; ">
+      <div class="but">
+        <div style="padding-left: 10px; " >
+          <button style="display: incline; float: left; background-color: rgb(66, 66, 247); "><a href="/addClient" style="color: black; ">ADD CLIENT</a></button>
+        </div>
+        <div >
+          <button style="background-color: rgb(66, 66, 247);"><a href="{% url 'pdf' %}" style="color: black">PRINT BILL</a></button>
+        </div>
+      </div>
 
-    <h1 class="display-3 container">Table of Users</h1>
-    <hr />
+      <h1 class="display-3 container">Table of Users</h1>
+      <hr />
 
-    <table class="table container" >
-      <tr>
-        <th>Full Name</th>
-        <th>Email</th>
-        <th>Supplier</th>
-        <th>Phone Number</th>
-        <th>Motor Unit</th>
-        <th>Location</th>
-        <th>Action</th>
-      </tr>
-      <tbody>
-        {% for i in table %}
+      <table class="table container" >
         <tr>
-          <td>{{ i.fullname}}</td>
-          <td>{{ i.email}}</td>
-          <td>{{ i.supplier}}</td>
-          <td>{{ i.phone_number}}</td>
-          <td>{{ i.unit}}</td>
-          <td>{{ i.location}}</td>
-          <td>
-            <a href="{% url 'edit_item' i.id %}">update</a>
-            <a href="{% url 'delete_item' i.id %}">Delete</a>
+          <th>Full Name</th>
+          <th>Email</th>
+          <th>Supplier</th>
+          <th>Phone Number</th>
+          <th>Motor Unit</th>
+          <th>Location</th>
+          <th>Action</th>
         </tr>
-        {% endfor %} 
-      </tbody>
-    </table>
+        <tbody>
+          {% for i in table %}
+          <tr>
+            <td>{{ i.fullname}}</td>
+            <td>{{ i.email}}</td>
+            <td>{{ i.supplier}}</td>
+            <td>{{ i.phone_number}}</td>
+            <td>{{ i.unit}}</td>
+            <td>{{ i.location}}</td>
+            <td>
+              <a href="{% url 'edit_item' i.id %}">update</a>
+              <a href="{% url 'delete_item' i.id %}">Delete</a>
+          </tr>
+          {% endfor %} 
+        </tbody>
+      </table>
+    </div>
+    
   </body>
 </html>
